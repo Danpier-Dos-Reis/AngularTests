@@ -6,6 +6,16 @@
   <input type="text" name="textInput" id="mainTextBox" value="Write Something Here">
   <button class="btnCopyandPaste" (click)="copyAndPaste()">Paste into white panel</button>
 </section>
+<!-- New Section -->
+<h1 class="titleOne">Example Property Biding</h1>
+<section class="eventBinding">
+  <div class="textBox">
+    <p>{{paragraph}}</p>
+  </div>
+  <input type="text" name="textInput" id="mainTextBox" value="Write Something Here">
+  <button class="btnCopyandPaste" [disabled]="enable" (click)="copyAndPaste()">Paste into white panel</button>
+  <button class="btnCopyandPaste" (click)="disableButton()">Block paste button</button>
+</section>
 
 
 

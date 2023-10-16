@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   paragraph:string = "";
+  enable:boolean = false;
+
+  disableButton(){ this.enable = !this.enable; }
 
   copyAndPaste(){
     let textInput:any = document.getElementById("mainTextBox");
