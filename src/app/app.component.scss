@@ -35,3 +35,34 @@
     border-color: #CD5C08;
     transition: 0.3s;
 }
+
+textarea{
+    margin-left: 8%;
+}
+
+#leftTextArea{
+    resize: none;
+    background-color: #CD5C08;
+    color: #fff;
+}
+#rightTextArea{
+    resize: none;
+    background-color: #79AC78;
+    color: darkblue;
+}
+
+#ngrightTextArea{
+    resize: none;
+}
+
+.boxRightContent{
+    width: 25%; height: 25%;
+    background-color: burlywood;
+    margin-left: 13%;
+    p{
+        margin-top: 0;
+        font-size: 16px;
+        color: black;
+        font-style: inherit;
+    }
+}
