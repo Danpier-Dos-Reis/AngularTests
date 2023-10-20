@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,5 +7,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent {
-  @Input() title?: string;
+  @Output() textWrote:EventEmitter<string> = new EventEmitter<string>();
+
+  writeSomething(e:Event){
+    let target:HTMLTextAreaElement = e.target as HTMLTextAreaElement;
+    this.textWrote.emit(target.value);
+  }
 }

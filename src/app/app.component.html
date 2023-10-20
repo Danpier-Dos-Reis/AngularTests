@@ -1,6 +1,5 @@
-<!-- input will be excuted on the parent template/component, then... when we write
-something in the textarea, this value affect the value [title] on the child component-->
-<textarea name="maintextarea" id="maintextarea" cols="40" rows="18" (input)="writeSomething($event)"></textarea>
-<app-child [title]="myTitle"></app-child>
+<!-- The title value come from the child <textarea> -->
+<app-child (textWrote)="writeSomething($event)"></app-child>
+<h1>{{title}}</h1>
 
 <!-- <router-outlet></router-outlet> -->

@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  myTitle?:string;
-  writeSomething(event:Event){
-    let target:HTMLTextAreaElement = event.target as HTMLTextAreaElement;
-    this.myTitle = target.value;
+  title?:string;
+  writeSomething(textContent:string){
+    this.title = textContent;
   }
 }
