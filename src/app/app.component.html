@@ -1,38 +1,6 @@
-<!-- Section Event Binding -->
-<h1 class="titleOne">Example Event Binding</h1>
-<section class="eventBinding">
-  <div class="textBox">
-    <p>{{paragraph}}</p>
-  </div>
-  <input type="text" name="textInput" id="mainTextBox" value="Write Something Here">
-  <button class="btnCopyandPaste" (click)="copyAndPaste()">Paste into white panel</button>
-</section>
-<!-- Section Property Binding -->
-<h1 class="titleOne">Example Property Biding</h1>
-<section class="eventBinding">
-  <div class="textBox">
-    <p>{{paragraph}}</p>
-  </div>
-  <input type="text" name="textInput" id="mainTextBox" value="Write Something Here">
-  <button class="btnCopyandPaste" [disabled]="enable" (click)="copyAndPaste()">Paste into white panel</button>
-  <button class="btnCopyandPaste" (click)="disableButton()">Block paste button</button>
-</section>
-<!-- Section Tow Data Binding -->
-<h1 class="titleOne">Example Tow Data Biding</h1>
-<section class="eventBinding">
-  <textarea name="leftTA" id="leftTextArea" cols="60" rows="15" (input)="reWrite($event)"></textarea>
-  <textarea name="rightTA" id="rightTextArea" cols="60" rows="15" (input)="reWrite($event)"></textarea>
-</section>
-<!-- Section ngModel -->
-<h1 class="titleOne">Example ngModel</h1>
-<section class="eventBinding">
-  <div class="boxRightContent">
-    <p>{{rContent}}</p>
-  </div>
-  <textarea name="ngrightTA" id="ngrightTextArea" cols="60" rows="15" [(ngModel)]="rContent" placeholder="Write Something here"></textarea>
-</section>
-
-
-
+<!-- input will be excuted on the parent template/component, then... when we write
+something in the textarea, this value affect the value [title] on the child component-->
+<textarea name="maintextarea" id="maintextarea" cols="40" rows="18" (input)="writeSomething($event)"></textarea>
+<app-child [title]="myTitle"></app-child>
 
 <!-- <router-outlet></router-outlet> -->
