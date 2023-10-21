@@ -1,1 +1,18 @@
-#maintextarea{ resize: none; }
+.leftPanel{
+    width: 20%; height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+
+    a{
+        text-decoration: none;
+        color: aliceblue;
+        margin: 5% 0 0 26.3%;
+    }
+}
+
+.leftPanel a:first-child{ margin-top: 30%; }
+
+app-child{
+    width:80%; height: 100%;
+}

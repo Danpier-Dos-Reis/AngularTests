@@ -1,3 +1,6 @@
-<!-- input will be excuted on the child template/component, then... when we write
-something in the textarea, this value affect the variable "title" on the parent component-->
-<textarea name="maintextarea" id="maintextarea" cols="40" rows="18" (input)="writeSomething($event)"></textarea>
+<section class="rightPanel" [ngSwitch]="sendEndPoint">
+    <app-contentone *ngSwitchCase="one"></app-contentone>
+    <app-contenttwo *ngSwitchCase="two"></app-contenttwo>
+    <app-contentthree *ngSwitchCase="three"></app-contentthree>
+    <h1 class="default_content" *ngSwitchDefault=>Root Location</h1>
+</section>

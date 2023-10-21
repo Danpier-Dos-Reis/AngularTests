@@ -1,16 +1,18 @@
 import { outputAst } from '@angular/compiler';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit} from '@angular/core';
+import {Location} from 'src/shared/models/Location';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.scss']
 })
-export class ChildComponent {
-  @Output() textWrote:EventEmitter<string> = new EventEmitter<string>();
+export class ChildComponent implements OnInit{
 
-  writeSomething(e:Event){
-    let target:HTMLTextAreaElement = e.target as HTMLTextAreaElement;
-    this.textWrote.emit(target.value);
-  }
+  home?:string = Location.C1; one?:string = Location.C2;
+  two?:string = Location.C3; three?:string = Location.C4;
+
+  @Input() sendEndPoint?:string;
+
+  ngOnInit(): void { }
 }

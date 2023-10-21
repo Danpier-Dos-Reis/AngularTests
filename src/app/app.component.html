@@ -1,5 +1,7 @@
-<!-- The title value come from the child <textarea> -->
-<app-child (textWrote)="writeSomething($event)"></app-child>
-<h1>{{title}}</h1>
-
+<section class="leftPanel">
+    <a (click)="displayContent($event)" href="#contentone">LinkContentOne</a>
+    <a (click)="displayContent($event)" href="#contenttwo">LinkContentOTwo</a>
+    <a (click)="displayContent($event)" href="#contentthree">LinkContentThree</a>
+</section>
+<app-child [sendEndPoint]="Endpoint"></app-child>
 <!-- <router-outlet></router-outlet> -->
