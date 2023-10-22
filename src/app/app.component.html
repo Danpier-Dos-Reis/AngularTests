@@ -1,48 +1,26 @@
-<div class="container">
-    <div class="slider">
+<!-- 
+    coverflow-effect-rotate="0" quita que se doblen las imagenes
+ -->
+<swiper-container
+pagination="false"
+effect="coverflow"
+grap-crusor="true"
+centered-slides="true"
+slides-per-view="3"
+coverflow-effect-rotate="0"
+coverflow-effect-stretch="0"
+coverflow-effect-depth="200"
+coverflow-effect-modifier="1"
+coverflow-effect-slide-shadows="false"
+>
+    <swiper-slide *ngFor="let image of pictures">
         <div class="card">
-            <img src="https://www.itespresso.es/wp-content/uploads/2016/05/sql_server-logo.jpg" alt="Microsoft SQL Server">
+            <div class="text">
+                <h3>Title</h3>
+                <p>Lorem Ipsum Dolor Sir Amet</p>
+            </div>
+            <img [src]="image" alt="Mountain">
         </div>
-        <div class="card">
-            <img src="https://www.starhostbd.com/images/crystal-reports-logo.png" alt="Crystal Repor">
-        </div>
-        <div class="card">
-            <img src="https://www.cesarebordi.it/wp-content/uploads/2016/08/logo-mysql-1-973x730.png" alt="MySQL">
-        </div>
-        <div class="card">
-            <img src="https://play-lh.googleusercontent.com/Gs6kFTfe9wy0kp3RvMMhCEejwohHaVUEaY9mda3aweBM9S6BLjLo7Nu4uTNNDN9gPfk=s180" alt=".NET Framework">
-        </div>
-        <div class="card">
-            <img src="https://images.sampletemplates.com/wp-content/uploads/2015/06/Annual-Report-Template.jpg" alt="Report">
-        </div>
-        <div class="card">
-            <img src="https://www.pinclipart.com/picdir/middle/553-5535032_html-css-javascript-logo-clipart.png" alt="HTML5">
-        </div>
-        <div class="card">
-            <img src="https://blog.eduonix.com/wp-content/uploads/2019/10/AngularJS-Overview-630x420.jpg" alt="Angular">
-        </div>
-<!-- =================================================================================== -->
-        <div class="card">
-            <img src="https://www.itespresso.es/wp-content/uploads/2016/05/sql_server-logo.jpg" alt="Microsoft SQL Server">
-        </div>
-        <div class="card">
-            <img src="https://www.starhostbd.com/images/crystal-reports-logo.png" alt="Crystal Repor">
-        </div>
-        <div class="card">
-            <img src="https://www.cesarebordi.it/wp-content/uploads/2016/08/logo-mysql-1-973x730.png" alt="MySQL">
-        </div>
-        <div class="card">
-            <img src="https://play-lh.googleusercontent.com/Gs6kFTfe9wy0kp3RvMMhCEejwohHaVUEaY9mda3aweBM9S6BLjLo7Nu4uTNNDN9gPfk=s180" alt=".NET Framework">
-        </div>
-        <div class="card">
-            <img src="https://images.sampletemplates.com/wp-content/uploads/2015/06/Annual-Report-Template.jpg" alt="Report">
-        </div>
-        <div class="card">
-            <img src="https://www.pinclipart.com/picdir/middle/553-5535032_html-css-javascript-logo-clipart.png" alt="HTML5">
-        </div>
-        <div class="card">
-            <img src="https://blog.eduonix.com/wp-content/uploads/2019/10/AngularJS-Overview-630x420.jpg" alt="Angular">
-        </div>
-    </div>
-</div>
+    </swiper-slide>
+</swiper-container>
 <!-- <router-outlet></router-outlet> -->
