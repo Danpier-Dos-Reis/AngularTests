@@ -1,0 +1,69 @@
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 16rem; height: 13rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+section .card:first-child{
+    background: linear-gradient(
+        to right,#E9CC95 0.5%,#A67318 50%,#5121B5 100%
+        );
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #5121B5;
+}
+
+section .card:nth-child(2){
+    background: linear-gradient(
+        to left,#33C28E 0.5%,#259A6F 50%,#1D7756 100%
+        );
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #4D4E4E;
+}
+
+section .card:nth-child(3){
+    background: linear-gradient(
+        120deg,#33C28E 0.5%,#259A6F 50%,#1D7756 100%
+        );
+    box-shadow: -10px -10px 15px 6px #4D4E4E;
+}
+
+section .card:nth-child(4){
+    background: linear-gradient(
+        to right bottom,#CD3906 0%,#CB4314 25%,#C85027 25%,#CA6442 100%
+        );
+    box-shadow: -10px -10px 0 6px #4D4E4E;
+}
+
+section .card:nth-child(5){
+    background: linear-gradient(
+        to right top,#117FC0,#CB4314,#C85027,#117FC0
+        );
+    box-shadow: -5px 5px 16px 6px #4D4E4E;
+}
+
+section .card:nth-child(6){
+    background: repeating-linear-gradient(
+        to right top,#117FC0,#CB4314,#C85027,#117FC0
+        );
+    box-shadow: 20px -7px 16px 6px #4D4E4E;
+}
+
+section .card:nth-child(7){
+    background: repeating-radial-gradient(
+        ellipse,#201337 15%,#170F26 30%,#201337 70%
+        );
+    box-shadow: 0 0 20px 8px #4D4E4E;
+}
+
+section .card:nth-child(8){
+    background: repeating-radial-gradient(
+        circle farthest-corner at top left,#0A3A54 20%,#170F26 15%,#0A3A54 100%
+        );
+    box-shadow: 0 0 20px 8px #4D4E4E;
+}
