@@ -1,18 +1,7 @@
-<button class="btn">Press here</button>
-<h1 class="firstTitle">Hello World!!!!</h1>
-<h1 class="slideToRight animation--infinite">Hello World!!!!</h1>
-
-<div class="container">
-    <h2 class="animate">Never hunter with negativo people</h2>
-    <h2 class="animate">Never hunter with negativo people</h2>
-    <h2 class="animate">Never hunter with negativo people</h2>
-    <br>
-    <hr>
-    <br>
-    <hr>
-    <h3 class="animate animation--normal">Never hunter with negativo people</h3>
-    <h3 class="animate animation--speed">Never hunter with negativo people</h3>
-    <h3 class="animate animation--function animation--normal">Never hunter with negativo people</h3>
-
+<div class="container" (mouseover)="displayParagraph()" (mouseout)="hideParagraph()">
+    <h1>Hello World</h1>
+    <div class="content" [ngClass]="cssClass ? 'displayParagraph':'hideParagraph'">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, esse doloribus autem ipsam praesentium harum deleniti, ducimus veniam aperiam porro dolorem officia suscipit iure quam quos aliquam quod ea aliquid.</p>
+    </div>
 </div>
 <!-- <router-outlet></router-outlet> -->

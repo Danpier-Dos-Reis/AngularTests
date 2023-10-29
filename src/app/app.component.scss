@@ -1,62 +1,32 @@
-button{
-    width: 12rem;
-    height: 5rem;
-    margin: 7% 0 0 7%;
-    border: 2px solid red;
+.container {
+    margin: 10rem 0 0 10rem;
+    width: 15rem;
+    height: (auto)+5px;
+    border-radius: 10px;
+    background-color: rgba(239, 239, 239, 1);
+    color: #0A1931;
+    position: relative;
+    cursor: pointer;
 
-    // transition-property: transform;
-    // transition-duration: 0.5s;
-    // transition: ease;
-    // transition-delay: 0s;
-
-    //Shorthand
-    transition: transform 0.6s ease-in 0s,
-                background-color 0.6s ease-in 0s,
-                border-color 0.6s ease-in 0s;
-    //We can use "all" keyword to apply the same transition
-    //for all transition properties
+    h1 {
+        margin: 30% 0 3rem 10%;
+    }
 }
 
-button:hover{
-    transform: translateX(0.6rem);
-    background-color: aqua;
-    border-color: orchid;
+.content {
+    position: absolute;
+    opacity: 0;
+    top: 2.1rem;
 }
 
-@keyframes slideToRight{
-    from{transform: translateX(0);}
-    to{transform: translateX(400px);}
+.displayParagraph {
+    opacity: 1;
+    background-color: rgba(239, 239, 239, 1);
+    transition: background-color 0.7s ease-in,opacity 1s ease-in;
 }
 
-.firstTitle{
-    margin-top: 4rem;
-    // animation-name: slideToRight;//Name of @keyframe
-    // animation-duration: 1s;
-    // animation-timing-function: ease-in-out;
-    // animation-delay: 0s;
-    // animation-iteration-count: 1;
-    // animation-direction: reverse;
-    // animation-fill-mode: both;//forwards and both
-
-    //Shorthand
-    animation: slideToRight 1s ease-in-out 0s 2 normal forwards;
+.hideParagraph{
+    opacity: 0;
+    background-color: transparent;
+    transition: background-color 0.7s ease-in,opacity 0.4s ease-in;
 }
-
-//Also we can make a class with the animation and assing this class to the element
-.slideToRight{animation: slideToRight 1s ease-in-out 0s 1 normal forwards;}
-
-.container{
-    width: 100%;
-    height: 15rem;
-}
-
-.animate{ animation: slideToRight 3s ease 0s 1 alternate-reverse both; }
-
-.animation--normal{animation-direction: normal; }
-
-.animation--speed{animation-duration: 0.4s;}
-
-.animation--fuction{animation-timing-function: ease-out;}
-
-.animation--infinite{animation-iteration-count: infinite;}
-

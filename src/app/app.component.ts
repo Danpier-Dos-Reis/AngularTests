@@ -8,6 +8,15 @@ import { Image } from 'src/shared/models/Image';
 })
 export class AppComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
 
+  cssClass:boolean = false;
+  displayParagraph(){
+    this.cssClass = !this.cssClass;
+  }
+
+  hideParagraph(){
+    this.cssClass = !this.cssClass;
+  }
+
   //Component LifeCycle
   ngOnChanges(changes: SimpleChanges): void {
     console.log("appOnChange");
