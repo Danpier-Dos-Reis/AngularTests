@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnInit, OnChanges, OnDestroy, SimpleChanges, ViewChild, ElementRef } from '@angular/core';
+import { Component, DoCheck, OnInit, OnChanges, OnDestroy, SimpleChanges, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { Image } from 'src/shared/models/Image';
 
 @Component({
@@ -8,6 +8,7 @@ import { Image } from 'src/shared/models/Image';
 })
 export class AppComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
 
+  @HostListener('mousemove',['$event'])
   cursorAnimation(e:MouseEvent){
     const cursorDot:HTMLDivElement = document.querySelector('.cursor-dot')as HTMLDivElement;
     const cursorOutline:HTMLDivElement = document.querySelector('.cursor-outline') as HTMLDivElement;

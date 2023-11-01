@@ -1,11 +1,7 @@
 .container{
-    width: 77vw;
-    height: 90vh;
-    border: 2px solid white;
-    margin: 5rem 0 0 6rem;
+    width: 100vw;
+    height: 100vh;
     cursor: none;
-    position: relative;
-
 }
 
 .cursor-dot{
@@ -18,7 +14,7 @@
     border: 2px solid hsla(0,0%,100%,0.5);
 }
 .cursor-dot,.cursor-outline{
-    position: absolute;
+    position: fixed;
     top: 0; left: 0;
     transform: translate(-50%,-50%);
     border-radius: 50%;
