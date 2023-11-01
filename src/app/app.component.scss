@@ -1,32 +1,27 @@
-.container {
-    margin: 10rem 0 0 10rem;
-    width: 15rem;
-    height: (auto)+5px;
-    border-radius: 10px;
-    background-color: rgba(239, 239, 239, 1);
-    color: #0A1931;
+.container{
+    width: 77vw;
+    height: 90vh;
+    border: 2px solid white;
+    margin: 5rem 0 0 6rem;
+    cursor: none;
     position: relative;
-    cursor: pointer;
 
-    h1 {
-        margin: 30% 0 3rem 10%;
-    }
 }
 
-.content {
+.cursor-dot{
+    width: 5px; height: 5px;
+    background-color: white;
+}
+
+.cursor-outline{
+    width: 30px; height: 30px;
+    border: 2px solid hsla(0,0%,100%,0.5);
+}
+.cursor-dot,.cursor-outline{
     position: absolute;
-    opacity: 0;
-    top: 2.1rem;
-}
-
-.displayParagraph {
-    opacity: 1;
-    background-color: rgba(239, 239, 239, 1);
-    transition: background-color 0.7s ease-in,opacity 1s ease-in;
-}
-
-.hideParagraph{
-    opacity: 0;
-    background-color: transparent;
-    transition: background-color 0.7s ease-in,opacity 0.4s ease-in;
+    top: 0; left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
 }

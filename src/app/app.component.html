@@ -1,7 +1,5 @@
-<div class="container" (mouseover)="displayParagraph()" (mouseout)="hideParagraph()">
-    <h1>Hello World</h1>
-    <div class="content" [ngClass]="cssClass ? 'displayParagraph':'hideParagraph'">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, esse doloribus autem ipsam praesentium harum deleniti, ducimus veniam aperiam porro dolorem officia suscipit iure quam quos aliquam quod ea aliquid.</p>
-    </div>
-</div>
+<section class="container" (mousemove)="cursorAnimation($event)">
+    <div #cursorDot class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+</section>
 <!-- <router-outlet></router-outlet> -->
